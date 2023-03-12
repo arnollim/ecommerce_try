@@ -97,4 +97,4 @@ def remove_from_cart(user_id):
 
 
 if __name__ == '__main__':
-    app.run(port=5001)
+    app.run(port=5002)
