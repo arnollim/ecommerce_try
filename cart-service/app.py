@@ -12,7 +12,7 @@ carts = [
 
 @app.route('/carts/<int:user_id>', methods=['GET'])
 def get_cart(user_id):
-    product_response = requests.get(f'http://localhost:5001/products')
+    product_response = requests.get(f'http://127.0.0.1:5001/products')
     products = product_response.json()
     response = []
     thisCart = None
@@ -33,7 +33,7 @@ def get_cart(user_id):
 def add_to_cart(user_id):
     product_id_toAdd = request.get_json()['product_id']
 
-    product_response = requests.get(f'http://localhost:5001/products')
+    product_response = requests.get(f'http://127.0.0.1:5001/products')
     products = product_response.json()
 
     product_toAdd = None
@@ -66,7 +66,7 @@ def add_to_cart(user_id):
 def remove_from_cart(user_id):
     product_id_toDelete = request.get_json()['product_id']
 
-    product_response = requests.get(f'http://localhost:5001/products')
+    product_response = requests.get(f'http://127.0.0.1:5001/products')
     products = product_response.json()
 
     product_toDelete = None
