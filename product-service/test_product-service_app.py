@@ -13,3 +13,4 @@ class TestProductService(unittest.TestCase):
     def test_get_products(self):
         products = app.get_products()
         self.assertEqual(self.products, products)
+
