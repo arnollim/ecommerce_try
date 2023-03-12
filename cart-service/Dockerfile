@@ -11,3 +11,6 @@ COPY cart.py .
 EXPOSE 5002
 
 CMD [ "python", "./app.py" ]
+
+RUN apt-get update && \
+    apt-get install -y curl

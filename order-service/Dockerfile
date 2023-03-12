@@ -11,3 +11,6 @@ COPY order.py .
 EXPOSE 5003
 
 CMD [ "python", "./app.py" ]
+
+RUN apt-get update && \
+    apt-get install -y curl

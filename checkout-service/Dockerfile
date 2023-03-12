@@ -6,8 +6,10 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY app.py .
-COPY checkout.py .
 
 EXPOSE 5004
 
 CMD [ "python", "./app.py" ]
+
+RUN apt-get update && \
+    apt-get install -y curl
