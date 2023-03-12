@@ -60,7 +60,8 @@ def add_to_cart(user_id):
         return 'Error: Cart already contains this item. Can only add one of each item '
 
     cart_toAdd['products'].append(product_id_toAdd)
-    return jsonify([cart_toAdd])
+    #return jsonify([cart_toAdd])
+    return 'successfully Added product_id: ' + str(product_id_toAdd) + ' from cart'
 
 @app.route('/carts/<int:user_id>', methods=['DELETE'])
 def remove_from_cart(user_id):
@@ -93,7 +94,7 @@ def remove_from_cart(user_id):
         return 'Error: Cart already contains this item. Can only add one of each item '
     else:
         cart_toDelete['products'].remove(product_id_toDelete)
-        return jsonify([cart_toDelete])
+        return "Successfully deleted product_id: " + str(product_id_toDelete) + ' from cart'
 
 
 if __name__ == '__main__':
