@@ -4,9 +4,9 @@ from product import Product
 app = Flask(__name__)
 
 products = [
-    Product(1, 'Product A', 'Desc1', 10.99),
-    Product(2, 'Product B', 'Desc2', 20.99),
-    Product(3, 'Product C', 'Desc3', 30.99)
+    Product(1, 'Book', 'Textbook', 15.95),
+    Product(2, 'Apple', 'Fuji', 0.50),
+    Product(3, 'Chair', 'Child', 25.00)
 ]
 
 
